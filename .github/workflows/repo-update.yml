@@ -14,8 +14,7 @@ jobs:
     steps:
     - name: Clone repository
       run: |
-        git clone https://github.com/termux-pacman/termux-packages.git
-        mv termux-packages termux-packages-pacman
+        git clone https://github.com/WTNLXTBL/termux-packages-pacman.git
     - name: Clone root repository
       run: git clone https://github.com/termux/termux-packages.git
     - name: Update repo
@@ -83,9 +82,9 @@ jobs:
         # Start upload
         info "Start upload"
         cd ../termux-packages-pacman
-        git config --global user.name "termux-pacman-bot"
-        git config --global user.email "termux-pacman-bot@outlook.com"
-        git remote set-url origin "https://termux-pacman-bot:${{ secrets.TOKEN }}@github.com/termux-pacman/termux-packages-pacman.git"
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git remote set-url origin "https://WTNLXTBL:${{ secrets.PAT }}@github.com/WTNLXTBL/termux-packages-pacman.git"
         commit "Update system repo"
         git add .
         git reset packages root-packages x11-packages README.md
