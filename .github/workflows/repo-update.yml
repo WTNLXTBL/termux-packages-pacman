@@ -82,8 +82,10 @@ jobs:
         # Start upload
         info "Start upload"
         cd ../termux-packages-pacman
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        #git config --global user.name "github-actions[bot]"
+        #git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "WTNLXTBL"
+        git config --global user.email "WTNLXTBL@outlook.com"
         git remote set-url origin "https://WTNLXTBL:${{ secrets.PAT }}@github.com/WTNLXTBL/termux-packages-pacman.git"
         commit "Update system repo"
         git add .
