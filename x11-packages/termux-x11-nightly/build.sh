@@ -5,7 +5,7 @@ TERMUX_PKG_MAINTAINER="Twaik Yont @twaik"
 TERMUX_PKG_VERSION=1.03.00
 TERMUX_PKG_REVISION=4
 TERMUX_PKG_SRCURL=https://github.com/termux/termux-x11/archive/ecd3a3e292baec2ea76d95527ae7db654df93141.tar.gz
-TERMUX_PKG_SHA256=040ac1d57f610263d374b105ee7c5cd20099f98e3d8e43cb9bd203b803a93684
+TERMUX_PKG_SHA256=96dc050d24dc6354a554a05cf4a6c61e1758d27692e897f21ac54242ba3f9e31
 TERMUX_PKG_AUTO_UPDATE=false
 TERMUX_PKG_PLATFORM_INDEPENDENT=true
 TERMUX_PKG_BUILD_IN_SRC=true
@@ -13,7 +13,7 @@ TERMUX_PKG_DEPENDS="xkeyboard-config"
 TERMUX_PKG_BREAKS="termux-x11"
 TERMUX_PKG_REPLACES="termux-x11"
 _JDK_VERSION=17.0.7.7.1
-_GRADLE_VERSION=8.1.1
+_GRADLE_VERSION=8.7
 
 termux_step_make() {
 	# Download and use a new enough gradle version to avoid the process hanging after running:
@@ -24,7 +24,7 @@ termux_step_make() {
 	termux_download \
 		https://services.gradle.org/distributions/gradle-$_GRADLE_VERSION-all.zip \
 		$TERMUX_PKG_CACHEDIR/gradle-$_GRADLE_VERSION-all.zip \
-		5625a0ae20fe000d9225d000b36909c7a0e0e8dda61c19b12da769add847c975
+		194717442575a6f96e1c1befa2c30e9a4fc90f701d7aee33eb879b79e7ff05c0
 	mkdir $TERMUX_PKG_TMPDIR/gradle
 	mkdir $TERMUX_PKG_TMPDIR/gradle-jdk
 	
